@@ -1,7 +1,7 @@
-import psutil;
-import smtplib;
+import psutil
+import smtplib
 
-import email.message; 
+import email
 
 #Set the content of the email to the file that was read
 msgToSend = email.message.EmailMessage();
