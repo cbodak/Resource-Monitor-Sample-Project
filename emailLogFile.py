@@ -15,6 +15,6 @@ msgToSend['From'] = "cbodak@uwo.ca"
 msgToSend['To'] = "cbodak@uwo.ca"
 
 #Set the server to send from and send the email
-server = smtplib.SMTP('localhost')
+server = smtplib.SMTP('10.0.2.5:3000')
 server.send_message(msgToSend)
 server.quit()

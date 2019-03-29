@@ -23,7 +23,7 @@ while(1):
             break;
     #If the process was not found, send the email
     if(processFound == 0):
-        server = smtplib.SMTP('localhost');
+        server = smtplib.SMTP('10.0.2.5:3000');
         server.send_message(msgToSend);
         server.quit();
     #Reset processFound to 0
