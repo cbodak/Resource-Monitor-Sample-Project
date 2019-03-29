@@ -9,8 +9,8 @@ msgToSend.set_content("The Resource Monitor has stopped running.");
 
 #Set the subject, from, and to fields of the email
 msgToSend['Subject'] = "Cloud Usage Monitor has Stopped Running";
-msgToSend['From'] = "cbodak@uwo.ca";
-msgToSend['To'] = "cbodak@uwo.ca";
+msgToSend['From'] = "Cloud.Testing2019@gmail.com";
+msgToSend['To'] = "Cloud.Testing2019@gmail.com";
 processFound = 0;
 
 #Check if the Resource Monitor is running
@@ -23,7 +23,9 @@ while(1):
             break;
     #If the process was not found, send the email
     if(processFound == 0):
-        server = smtplib.SMTP('10.0.2.5:3000');
+        server = smtplib.SMTP('smtp.gmail.com', 587);
+        server.starttls();
+        server.login("Cloud.Testing2019@gmail.com", "Cloud123Testing$");
         server.send_message(msgToSend);
         server.quit();
     #Reset processFound to 0
