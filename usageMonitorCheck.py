@@ -1,10 +1,10 @@
 import psutil
 import smtplib
 
-import email
+from email.message import EmailMessage
 
 #Set the content of the email to the file that was read
-msgToSend = email.message.EmailMessage();
+msgToSend = EmailMessage();
 msgToSend.set_content("The Resource Monitor has stopped running.");
 
 #Set the subject, from, and to fields of the email
